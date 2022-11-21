@@ -3,6 +3,7 @@ import math
 class Cirulo:
     
     def __init__(self,radio, n=1):
+
         if radio <= 0 or n <= 0:
             print("El radio o su multiplo deben ser mayor que cero.")
         else:
@@ -17,7 +18,14 @@ class Cirulo:
     def __str__(self):
         return "El círculo tiene un radio de " + str(self.radio) 
 
-miCirculo = Cirulo(2,2)
-print(miCirculo)
-print(miCirculo.area())
-print(miCirculo.perimetro())
+if __name__ == "__main__":
+
+    circulo1 = Cirulo(0)
+    circulo2 = Cirulo(4,0)
+    circulo3 = Cirulo(5,2)
+
+    circulo1 = Cirulo(2,2)
+    print(circulo1)
+    print(circulo1.area())
+    print(circulo1.perimetro())
+
