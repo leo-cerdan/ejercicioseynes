@@ -1,3 +1,5 @@
+import math
+
 class Cirulo:
     
     def __init__(self,radio, n=1):
@@ -5,3 +7,17 @@ class Cirulo:
             print("El radio o su multiplo deben ser mayor que cero.")
         else:
             self.radio = radio * n
+            
+    def area(self):
+        return "El área del círuculo es " + str(round(math.pi*self.radio**2,2))
+
+    def perimetro(self):
+        return "El perímetro del círculo es " + str(round(2*math.pi*self.radio,2))
+
+    def __str__(self):
+        return "El círculo tiene un radio de " + str(self.radio) 
+
+miCirculo = Cirulo(2,2)
+print(miCirculo)
+print(miCirculo.area())
+print(miCirculo.perimetro())
